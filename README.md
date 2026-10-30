@@ -77,7 +77,6 @@ it risk-free to remove — and took the disk from 30 GB to 150 GB free in an aft
 ### Option A — download the app (no developer tools needed)
 
 1. Open the [**Releases**](../../releases/latest) page and download **`DiskFree-x.y.z.zip`**.
-   *(The repository is private: you need to be added as a collaborator to see it, or ask for the zip directly.)*
 2. Double-click the zip and drag **DiskFree.app** into your **Applications** folder.
 3. **First launch.** DiskFree isn't notarized by Apple, so macOS blocks it the first time:
    - Double-click DiskFree, click **Done** in the warning.
