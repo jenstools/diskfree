@@ -4,7 +4,7 @@
 
 # DiskFree
 
-**Find out what's eating your Mac's disk — and get it back without breaking anything.**
+**Find out what's eating your Mac's disk — and decide what to get back.**
 
 DiskFree scans for rebuildable build folders, forgotten AI models, package caches and old installers,<br>
 rates every item by risk, and only ever deletes after you click and confirm.
@@ -20,6 +20,12 @@ rates every item by risk, and only ever deletes after you click and confirm.
 <img src="docs/overview.png" width="860" alt="DiskFree overview: totals by risk, weekly report and the biggest levers">
 
 </div>
+
+> [!CAUTION]
+> **Use DiskFree at your own risk.** It deletes files, and it is not perfect: its risk ratings are heuristics and can
+> be wrong for your setup. **Don't use it if you don't understand what it is about to delete.** Check every item before
+> you clean, keep a current backup (e.g. Time Machine), and prefer *Move to Trash* over *Delete Permanently*.
+> The author accepts **no liability** for lost data or any other damage. See the [Disclaimer](#disclaimer).
 
 ---
 
@@ -63,6 +69,10 @@ it risk-free to remove — and took the disk from 30 GB to 150 GB free in an aft
 ---
 
 ## Install
+
+> [!WARNING]
+> Before installing, read the [caution note](#diskfree) at the top and the [Disclaimer](#disclaimer). If you're not
+> sure what a `node_modules` folder, a Python venv or a model cache is, ask someone who does before cleaning anything.
 
 ### Option A — download the app (no developer tools needed)
 
@@ -136,6 +146,22 @@ asleep at that moment, it runs at the next wake. Reports are kept in
 rm -rf ~/Library/Application\ Support/DiskFree
 defaults delete com.jenspolomski.diskfree
 ```
+
+## Disclaimer
+
+DiskFree is a personal tool shared as is, **without any warranty**, express or implied — including fitness for a
+particular purpose. It is not a commercial product and has not been tested on anything but a handful of Macs.
+
+- It moves files to the Trash and, if you choose so, **deletes them permanently**. Deleted data may not be recoverable.
+- The categories and risk ratings ("Risk-free", "Small risk", "Check yourself") are **best guesses** based on folder
+  names, locations and dates. A folder rated risk-free can still matter to you — for example a venv you can't
+  rebuild, a model you can't download again, or files that only look like a cache.
+- You alone decide what gets cleaned. **Review every item, keep backups, and use it only if you understand what it
+  does.**
+- **The author is not liable** for any loss of data, broken projects, lost time or any other damage resulting from
+  using, or being unable to use, this software.
+
+By using DiskFree you accept these terms.
 
 <details>
 <summary><b>Project layout</b></summary>
